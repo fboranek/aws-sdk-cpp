@@ -260,6 +260,7 @@ void S3CrtClient::init(const S3Crt::ClientConfiguration& config, const std::shar
   if (!m_s3CrtClient)
   {
     AWS_LOGSTREAM_FATAL(ALLOCATION_TAG, "Failed to allocate aws_s3_client instance, abort.");
+    throw std::bad_alloc();
   }
 }
 
